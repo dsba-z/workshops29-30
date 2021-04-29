@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     horLayout->addWidget(ui->grpSettings);
 
     // trigger setting default parameters
-    onspinBoxLevels_valueChanged(ui->spinBoxLevels->value());
+    on_spinBoxLevels_valueChanged(ui->spinBoxLevels->value());
 
 }
 
@@ -37,7 +37,7 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::onspinBoxLevels_valueChanged(int lvls)
+void MainWindow::on_spinBoxLevels_valueChanged(int lvls)
 {
     //int a = 0;
 //    _renderArea->setLevels(lvls);
