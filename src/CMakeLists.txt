@@ -28,3 +28,4 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 # instead of listing targets directly, we pass the control to subproject cmakes
 add_subdirectory(ex1_helloworld)
+add_subdirectory(ex2_cantor)
