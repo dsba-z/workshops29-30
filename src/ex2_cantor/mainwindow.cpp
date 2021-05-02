@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 #include <QtWidgets>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,8 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     horLayout->addWidget(ui->grpSettings);
 
     // trigger setting default parameters
-    on_spinBoxLevels_valueChanged(ui->spinBoxLevels->value());
-
+    // alternative way to set up slots, based on function name
+    //    on_spinBoxLevels_valueChanged(ui->spinBoxLevels->value());
 }
 
 MainWindow::~MainWindow()
@@ -35,10 +36,13 @@ MainWindow::~MainWindow()
 }
 
 
-
-
-void MainWindow::on_spinBoxLevels_valueChanged(int lvls)
+void MainWindow::setLevelsSlot(int lvls)
 {
-    //int a = 0;
-//    _renderArea->setLevels(lvls);
+    _renderArea->setLevels(lvls);
 }
+
+    // alternative way to set up slots, based on function name
+//void MainWindow::on_spinBoxLevels_valueChanged(int lvls)
+//{
+//    _renderArea->setLevels(lvls);
+//}

@@ -9,8 +9,10 @@ class RenderArea : public QWidget
 public:
     explicit RenderArea(QWidget* parent = nullptr);
 
+    void setLevels(int lvls);
 
 protected:
+    int levels;
     void paintEvent(QPaintEvent* event) override;
 
 signals:

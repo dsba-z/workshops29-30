@@ -21,8 +21,9 @@ public:
     ~MainWindow();
 
 private slots:
-
-    void on_spinBoxLevels_valueChanged(int lvls);
+//    void on_spinBoxLevels_valueChanged(int lvls);
+    void setLevelsSlot(int lvls);
+    
 
 private:
     Ui::MainWindow* ui;
